@@ -8,7 +8,7 @@ var consign = require('consign')
 var bodyParser = require('body-parser')
 
 /**Importação do express-validator */
-var { check, expressValidator } = require('express-validator')
+var expressValidator = require('express-validator');
 
 /**Iniciando o express objetp */
 var app = express()
@@ -24,7 +24,7 @@ app.use(express.static('./app/piblic'))
 app.use(bodyParser.urlencoded({extended : true}))
 
 /**Configuração do middleware validator do express */
-app.set(check)  
+app.use(expressValidator()); 
 
 /**Efetuação do upload para o objeto app */
 consign()
