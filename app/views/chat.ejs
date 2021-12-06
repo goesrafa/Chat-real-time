@@ -136,6 +136,8 @@
 			html += '</div>';
 
 			$('#dialogos').append(html);
+
+			window.scrollTo(0, document.body.scrollHeight)
 		})
 
 		socket.on('participanteParaCliente', function (data) {
